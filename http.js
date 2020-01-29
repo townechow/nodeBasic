@@ -11,7 +11,7 @@ http.createServer((req,res)=>{ //启动一个服务
     let url = req.url; // 请求的url
     console.log("url==",url);
     
-    fs.readFile(`./${url}`,(err,data)=>{ // 根据访问的URL去读取对应的文件件，并将其反应
+    fs.readFile(`./${url}`,(err,data)=>{ // 根据访问的URL去读取对应的文件件，并将其返回
         if(err){
             res.writeHead(404);
             res.end('404 not found');
